@@ -1,0 +1,69 @@
+<Game>:
+
+	check: check
+	userchoice: userchoice
+	pcchoice: pcchoice
+
+
+	GridLayout:
+		cols: 1
+		size: root.width, root.height
+
+		GridLayout:
+			cols: 2
+			spacing: 30
+			padding: 5
+
+			Label:
+				text: "YOUR CHOICE"
+				font_size:30
+
+
+			Label:
+				text: "COMPUTER CHOICE"
+                font_size:30
+
+			Image:
+				id: userchoice
+				color:0,0,1,1
+				source: ""
+
+			Image:
+				id: pcchoice
+				color:0,0,1,1
+				source: ""
+
+		Label:
+			id: check
+			font_size:50
+			text: ""
+
+
+		BoxLayout:
+			orientation: "horizontal"
+			spacing: 20
+			padding: 5
+
+
+
+			Button:
+				text: "STONE"
+				color:0,0,1,1
+				font_size:40
+				on_press: root.stone()
+
+
+
+
+			Button:
+				text: "SCISSORS"
+				color:225/225,225,0,1
+				font_size:40
+				on_press: root.scissor()
+
+			Button:
+				text: "PAPER"
+				color:255/255,102/255,102/255,1
+				font_size:40
+				on_press: root.paper()
+
